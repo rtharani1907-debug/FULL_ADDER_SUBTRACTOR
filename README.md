@@ -56,6 +56,7 @@ module full_adder (
     assign carry = (a & b) | (b & cin) | (a & cin); // Majority function for carry
 
 endmodule
+
 module full_subtractor (
     input  wire a, b, bin,       // Inputs
     output wire diff, borrow     // Outputs
@@ -76,7 +77,8 @@ endmodule
 
 **Output Timing Waveform**
 ![alt text](<Screenshot (123).png>)
-![Uploading Screenshot (129).png…]()
+<img width="1920" height="1080" alt="Screenshot (129)" src="https://github.com/user-attachments/assets/b97673b6-0b01-4edb-83ff-a7e946daf3e4" />
+
 
 **Result:**
 
