@@ -56,15 +56,27 @@ module full_adder (
     assign carry = (a & b) | (b & cin) | (a & cin); // Majority function for carry
 
 endmodule
+module full_subtractor (
+    input  wire a, b, bin,       // Inputs
+    output wire diff, borrow     // Outputs
+);
+
+    // Logic equations
+    assign diff   = a ^ b ^ bin;                  // Difference
+    assign borrow = (~a & b) | (~(a ^ b) & bin);  // Borrow logic
+
+endmodule
 ```
  Developed by:Tharani Rameshbabu RegisterNumber:25018409
 
 
 **RTL Schematic**
 ![alt text](<Screenshot (122).png>)
+<img width="1920" height="1080" alt="Screenshot (128)" src="https://github.com/user-attachments/assets/a777f804-b71d-4c4a-ac10-00b707a41140" />
 
 **Output Timing Waveform**
 ![alt text](<Screenshot (123).png>)
+![Uploading Screenshot (129).png…]()
 
 **Result:**
 
